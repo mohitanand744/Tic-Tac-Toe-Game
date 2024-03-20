@@ -1,0 +1,31 @@
+@media screen and (width < 1080px) {
+  html {
+    font-size: 58.5%;
+  }
+}
+
+@media screen and (width < 896px) {
+  .game-container .btn-container .btn {
+    padding: 3% 14%;
+  }
+}
+
+@media screen and (width < 700px) {
+  main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  html {
+    font-size: 53.5%;
+  }
+  nav p{
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (width < 500px) {
+    nav p{
+        font-size: 2.6rem;
+      }html {
+        font-size: 45.5%;
+      }
+}
