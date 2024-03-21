@@ -39,7 +39,7 @@ const checkWinner = () => {
 
     if (position1 != "" && position2 != "" && position3 != "") {
       if (position1 === position2 && position2 === position3) {
-        winnerXorO.innerText = `${position1} is Winner 😎💯`;
+        winnerXorO.innerText = `${position1} is Winner 💯`;
         turnXorO.innerText = `Congratulation ${position1}`;
         gameover.play();
         let disableBtns = () => {
