@@ -3,7 +3,7 @@ let resetBtn = document.getElementById("reset-btn");
 let newGame = document.getElementById("new-game");
 let turnXorO = document.querySelector(".turn-x-or-O");
 let winnerXorO = document.querySelector(".winner");
-let music = new Audio("./Music/music.mp3");
+let musicPlay = new Audio("./Music/music.mp3");
 let audioTurn = new Audio("./Music/ting.mp3");
 let gameover = new Audio("./Music/win.mp3");
 let newGameMusic = new Audio("./Music/newgame.mp3");
@@ -22,7 +22,7 @@ const winPatterns = [
   [6, 7, 8],
 ];
 
-music.play();
+musicPlay.play();
 
 let resetBtns = () => {
   for (let btns of gameBtns) {
