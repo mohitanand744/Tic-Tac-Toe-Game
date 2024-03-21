@@ -22,7 +22,7 @@ const winPatterns = [
   [6, 7, 8],
 ];
 
-/* music.play() */
+music.play()
 
 let resetBtns = () => {
   for (let btns of gameBtns) {
