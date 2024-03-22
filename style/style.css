@@ -71,6 +71,7 @@ nav {
   grid-template-columns: repeat(2, 1fr);
   padding: 0% 5%;
   width: 100%;
+  height: 100vh;
   background: linear-gradient(to right top, #ff00f2, #00ffd5d2, #005fec);
 }
 

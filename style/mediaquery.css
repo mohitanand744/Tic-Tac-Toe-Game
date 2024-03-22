@@ -10,7 +10,7 @@
   }
 }
 
-@media screen and (width < 700px) {
+@media screen and (width < 768px) {
   .main {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -35,6 +35,9 @@
       height: 25px;
     }
   }
+  .gif-container img {
+    display: none;
+  }
 }
 
 @media screen and (width < 500px) {
@@ -43,8 +46,5 @@
   }
   html {
     font-size: 45.5%;
-  }
-  .gif-container img{
-    display: none;
   }
 }
