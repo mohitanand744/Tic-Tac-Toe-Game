@@ -37,9 +37,37 @@ nav {
     -webkit-text-fill-color: transparent;
   }
 }
+.start-container {
+  height: calc(100vh - 7rem);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right top, #ff00f2, #00ffd5d2, #005fec);
+}
+.start {
+  padding: 2% 3%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  font-size: 3rem;
+  border: none;
+  background: linear-gradient(to left, #0360ebcb, #ff00f2bd);
+  border-radius: 0.7rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bolder;
+  color: #fff;
+  transition: 1s;
 
-main {
-  display: grid;
+  &:hover {
+    background: linear-gradient(to right, #0360ebcb, #ff00f2bd);
+  }
+  &:active {
+    background: linear-gradient(to right, #0360ebcb, #ff00f2bd);
+  }
+}
+.main {
+  display: none;
   grid-template-columns: repeat(2, 1fr);
   padding: 0% 5%;
   width: 100%;
@@ -49,6 +77,7 @@ main {
 .game-container {
   height: 50%;
   display: flex;
+  position: relative;
   margin-top: 5%;
   flex-direction: column;
   align-items: center;
@@ -86,7 +115,6 @@ main {
     display: flex;
     justify-content: center;
     gap: 3rem;
-    
 
     & .btn {
       padding: 3% 5%;
@@ -101,6 +129,16 @@ main {
       &:active {
         background: -webkit-linear-gradient(#0360eb59, #ff00f263);
       }
+    }
+  }
+
+  & .sound-option-container {
+    position: absolute;
+    left: 5px;
+    cursor: pointer;
+
+    & .mute {
+      display: none;
     }
   }
 }

@@ -11,21 +11,40 @@
 }
 
 @media screen and (width < 700px) {
-  main {
+  .main {
     grid-template-columns: repeat(1, 1fr);
   }
   html {
     font-size: 53.5%;
   }
-  nav p{
+  nav p {
     font-size: 3.5rem;
+  }
+  .start {
+    padding: 4% 6%;
+    font-size: 4rem;
+  }
+  .sound-option-container {
+    top: 0px;
+    & .sound {
+      width: 25px;
+      height: 25px;
+    }
+    & .mute {
+      width: 25px;
+      height: 25px;
+    }
   }
 }
 
 @media screen and (width < 500px) {
-    nav p{
-        font-size: 2.6rem;
-      }html {
-        font-size: 45.5%;
-      }
+  nav p {
+    font-size: 2.6rem;
+  }
+  html {
+    font-size: 45.5%;
+  }
+  .gif-container img{
+    display: none;
+  }
 }

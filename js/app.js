@@ -8,6 +8,10 @@ let audioTurn = new Audio("./Music/ting.mp3");
 let gameover = new Audio("./Music/win.mp3");
 let newGameMusic = new Audio("./Music/newgame.mp3");
 let resetSound = new Audio("./Music/reset.mp3");
+let muteBtn = document.querySelector(".sound");
+let unmuteBtn = document.querySelector(".mute");
+let startContainer = document.querySelector(".start-container");
+let mainContainer = document.querySelector(".main");
 
 let turnO = false;
 
@@ -22,7 +26,9 @@ const winPatterns = [
   [6, 7, 8],
 ];
 
-musicPlay.play();
+let muteMusic = () => {
+  musicPlay.pause();
+};
 
 let resetBtns = () => {
   for (let btns of gameBtns) {
@@ -39,9 +45,10 @@ const checkWinner = () => {
 
     if (position1 != "" && position2 != "" && position3 != "") {
       if (position1 === position2 && position2 === position3) {
-        winnerXorO.innerText = `${position1} is Winner 😎💯`;
+        winnerXorO.innerText = `${position1} is Winner 💯`;
         turnXorO.innerText = `Congratulation ${position1}`;
         gameover.play();
+        musicPlay.pause();
         let disableBtns = () => {
           for (let btns of gameBtns) {
             btns.disabled = true;
@@ -70,8 +77,26 @@ gameBtns.forEach((currElem) => {
 resetBtn.addEventListener("click", () => {
   resetBtns();
   resetSound.play();
+  musicPlay.play();
+  muteBtn.style.display = "block";
+  unmuteBtn.style.display = "none";
+  turnXorO.innerText = turnO ? "Now It's Your Turn O" : "Now It's Your Turn X";
+  winnerXorO.innerText = `--- winner`;
 });
 newGame.addEventListener("click", () => {
   resetBtns();
-  newGameMusic.play();
+  musicPlay.play();
+ mainContainer.style.display = "grid";
+  startContainer.style.display = "none";
+});
+muteBtn.addEventListener("click", () => {
+  muteMusic();
+  unmuteBtn.style.display = "block";
+  muteBtn.style.display = "none";
+});
+
+unmuteBtn.addEventListener("click", () => {
+  muteBtn.style.display = "block";
+  unmuteBtn.style.display = "none";
+  musicPlay.play();
 });
