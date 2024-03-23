@@ -86,7 +86,7 @@ resetBtn.addEventListener("click", () => {
 newGame.addEventListener("click", () => {
   resetBtns();
   musicPlay.play();
- mainContainer.style.display = "grid";
+  mainContainer.style.display = "grid";
   startContainer.style.display = "none";
 });
 muteBtn.addEventListener("click", () => {

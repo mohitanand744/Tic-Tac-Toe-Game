@@ -115,7 +115,6 @@ nav {
     width: 55%;
     display: flex;
     justify-content: center;
-    gap: 3rem;
 
     & .btn {
       padding: 3% 5%;
