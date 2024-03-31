@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik+Storm&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap");
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
   list-style: none;
-  font-family: "Rubik Storm", system-ui;
+  font-family: "Rubik Scribble", system-ui;
   text-shadow: 3px 4px 11px rgba(0, 0, 0, 1);
 }
 html {
@@ -184,14 +184,19 @@ nav {
   }
 
   & .footer {
-    & p {
-      text-shadow: 3px 4px 11px rgba(0, 0, 0, 1);
-      font-family: "Rubik Storm", system-ui;
-      font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    & a {
+      font-weight: bold;
+      text-decoration: none;
+      color: #fff;
       font-style: normal;
     }
 
-    & img {
+    & .logo {
       box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
         rgba(0, 0, 0, 0.22) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
         rgba(0, 0, 0, 0.27) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
@@ -201,7 +206,29 @@ nav {
       -ms-border-radius: 50%;
       -o-border-radius: 50%;
     }
+    & .click {
+      animation: clickAnimation 0.5s linear infinite;
+      -webkit-animation: clickAnimation 0.5s linear infinite alternate;
+    }
   }
+}
+
+@keyframes clickAnimation {
+  0% {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(-35px);
+    -webkit-transform: translateY(-35px);
+    -moz-transform: translateY(-35px);
+    -ms-transform: translateY(-35px);
+    -o-transform: translateY(-35px);
+    scale: 0.80;
+}
 }
 
 /**  scrollbar  */
